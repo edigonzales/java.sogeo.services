@@ -1,0 +1,30 @@
+= ilivalidator-web-service
+Stefan Ziegler
+2021-02-07
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: java, ilivalidator, spring boot
+:idprefix:
+
+== Kontext
+
+Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu, 
+asdfasdfasdf consequat imperdiet nunc quis bibendum. Nulla semper, erat quis ornare tristique, lectus massa posuere 
+libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.
+
+== Technologien / Frameworks / Bibliotheken
+
+- https://github.com/claeis/ilivalidator[ilivalidator]
+- https://spring.io/projects/spring-boot[Spring Boot]
+
+== Konfigurieren und starten
+
+```
+docker run -p 8888:8888 edigonzales/ilivalidator-web-service:showcase
+```
+
+-> http://localhost:8888/ilivalidator
+
+== Code
+- https://github.com/sogis/ilivalidator-web-service-websocket
+
