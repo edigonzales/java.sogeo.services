@@ -1,0 +1,28 @@
+= GRETL
+Stefan Ziegler
+2021-02-22
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: java, gradle, jenkins, gretl
+:idprefix:
+
+== Kontext
+
+_GRETL_ ist unser CLI-only ETL-Tool und zusammen mit _Jenkins_ das Herz unserer GDI. Früher entstanden laufend neu Skripts, die Daten herunterluden, Daten importierten, Daten umbauten und wieder exportierten. Das Rad wurde täglich neu erfunden und am Schluss endete es im Chaos, da die Übersicht über alle Cronjobs auf verschiedensten Servern verloren ging. Wir wollten und mussten es besser machen. Im Grunde sind es atomare Tasks, die zusammen einen Job ergeben. Also auch was was ein Build-Tool erledigen muss. So wurde _GRETL_ geboren.
+
+Als Basis verwenden wir _Gradle_ und ergänzen es mit einem Plugin, das die für uns fehlenden - hauptsächlich geo-related - Tasks implementiert. Die eigentlichen Build-Jobs werden durch _Jenkins_ orchestriert. Alles sauber an einem Ort beisammen und totale Übersicht. &laquo;Spatial is not special&raquo; at it's best. Alles out-of-the-box dabei: Logging? Check. Daten herunterladen? Check. Task-Abhängigkeit? Check. Daten entzippen? Check. Cronjobs? Check. User input auswerten? Check. Etc. pp.
+
+Das Gespann _GRETL_ und _Jenkins_ ist ebenfalls für unsere ÖREB-Kataster-Prozesse unverzichtbar.
+
+== Frameworks / Bibliotheken
+
+- https://gradle.org/[Gradle]
+- https://www.jenkins.io/[Jenkins]
+- ...
+
+== Code
+- https://github.com/sogis/gretl
+- https://github.com/sogis/gretljobs
+- https://github.com/sogis/oereb-gretljobs
+
+

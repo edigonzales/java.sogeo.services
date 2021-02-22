@@ -1,0 +1,28 @@
+= ÖREB web client
+Stefan Ziegler
+2021-02-22
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: java, öreb, oereb, gwt, dominio ui, jaxb
+:idprefix:
+
+== Kontext
+
+Neben dem statischen ÖREB-Kataster-Auszug muss jeder Kanton einen dynamischen Auszug anbieten. Dynamisch heisst in diesem Sinne sowas wie eine Webanwendung aka Web GIS Client aka Web Map Client. Wir haben den dynamischen Auszug in unseren bestehenden Web GIS Client integriert mit dem Hauptargument, dass die Benutzer den Client nicht wechseln wollen. 
+
+Um den Output des xref:../oereb-web-service/index.adoc[_oereb web service_] besser testen zu können und um endlich auch auszuprobieren, ob man mit Java  Javascript-Frontend-Anwendungen programmieren kann, entstand mit http://www.gwtproject.org/[_GWT_] und https://github.com/DominoKit/domino-ui[_Domino UI_] dieses Stück Software. Er ist stark angelehnt an die Lösung des Kantons Basel-Landschaft.
+
+Die Auswertung des ÖREB-XML-Auszuges auf Serverseite gschieht mit https://projects.eclipse.org/projects/ee4j.jaxb-impl[_JAXB_].
+
+Das Ganze erwies sich als ziemlich &laquo;straight foward&raquo;. Einzig der Start mit _GWT_ in Verbindung mit _Spring Boot_ ist hakelig und erst bei der xref:../standortkarte/index.adoc[Standortkarte] ging dann das Licht auf.
+
+== Frameworks / Bibliotheken
+
+- http://www.gwtproject.org/[GWT]
+- https://github.com/DominoKit/domino-ui[Domino UI]
+- https://projects.eclipse.org/projects/ee4j.jaxb-impl[JAXB]
+- https://spring.io/projects/spring-boot[Spring Boot]
+
+== Code
+- https://github.com/grundstuecksinformation/oereb-client-gwt
+

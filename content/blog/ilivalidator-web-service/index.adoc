@@ -8,22 +8,14 @@ Stefan Ziegler
 
 == Kontext
 
-Nam id nisl quam. Donec a lorem sit amet libero pretium vulputate vel ut purus. Suspendisse leo arcu, 
-asdfasdfasdf consequat imperdiet nunc quis bibendum. Nulla semper, erat quis ornare tristique, lectus massa posuere 
-libero, ut vehicula lectus nunc ut lorem. Aliquam erat volutpat.
+Der _ilivalidator-web-service_ dient zum Validieren beliebiger INTERLIS-Transferdateien. Entstanden aus dem Bedürfnis, dass Ingenieur- und Planungsbüros, die Nutzungsplanungsdaten erfassen, selbständig die Daten prüfen können. Heute wird der bewusst sehr einfach gehaltene Service für verschiedene Themen eingesetzt. So werden z.B. keine Optionen exponiert. Grundsätzlich kann gegen jedes Datenmodell geprüft werden, das in den Standard-Modellablagen (resp. in verknüpften Modellablagen) vorhanden ist. Für einige wenige Modellen werden automatisch xref:../ilivalidator-custom-functions/index.adoc[Zusatzvalidierungen] eingesetzt.
 
-== Technologien / Frameworks / Bibliotheken
+In einer ersten Version wurden die Daten mittels HTTP-Post hochgeladen. Weil die Firewall die Verbindung zwischen Browser und Server nacah 2 Minuten kappte, wird momentan auf Websocket gesetzt. Die Logfiles werden, zwecks einfacherer horizontaler Skalierung in Openshift, auf AWS S3 gespeichert.
+
+== Frameworks / Bibliotheken
 
 - https://github.com/claeis/ilivalidator[ilivalidator]
 - https://spring.io/projects/spring-boot[Spring Boot]
-
-== Konfigurieren und starten
-
-```
-docker run -p 8888:8888 edigonzales/ilivalidator-web-service:showcase
-```
-
--> http://localhost:8888/ilivalidator
 
 == Code
 - https://github.com/sogis/ilivalidator-web-service-websocket
