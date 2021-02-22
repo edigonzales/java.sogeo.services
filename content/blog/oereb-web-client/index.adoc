@@ -3,7 +3,7 @@ Stefan Ziegler
 2021-02-22
 :jbake-type: post
 :jbake-status: published
-:jbake-tags: java, öreb, oereb, gwt, dominio ui, jaxb
+:jbake-tags: java, öreb, oereb, gwt, dominio ui, jaxb, spring boot
 :idprefix:
 
 == Kontext
