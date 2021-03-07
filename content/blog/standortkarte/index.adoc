@@ -1,0 +1,26 @@
+= Standortkarte
+Stefan Ziegler
+2021-03-03
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: java, gwt, dominio ui, spring boot, graalvm, osm
+:idprefix:
+
+== Kontext
+
+Jede Organisation zeigt in ihrem Webauftritt in einem kleinen Kärtchen die Standorte der jeweiligen Dienststellen, Abteilungen, Ämter etc. Ganz zu Beginn wurde bei uns irgend ein Fremdanbieter à la Google Maps verwendet. Dies konnten wir als Amt für Geoinformation natürlich nur schwer verdauen und darum musste was eigenes her. Diese erste Lösung dümpelte dann unmotiviert vor sich her, wobei eher das Problem war, dass bei uns niemand mehr Javascript beherrschte.
+
+Also ein weiterer guter Anwendungsfall für http://www.gwtproject.org/[_GWT_] und Freunde. Erwähnenswert in diesem konkreten Fall ist, dass das Projekt nun sauber in Subprojekte aufgeteilt ist und somit keine unnötigen Client-Bibliotheken auf dem Server landen. Zudem konnte die https://spring.io/projects/spring-boot[_Spring Boot_] Anwendung mit https://www.graalvm.org/[_GraalVM_] zu einem Native Binary kompiliert werden. 
+
+Das Routing wurde mit https://routing.osm.ch/[OpenStreeMap] umgesetzt. Das GUI mit https://github.com/DominoKit/domino-ui[_Domino UI_].
+
+== Frameworks / Bibliotheken
+
+- http://www.gwtproject.org/[GWT]
+- https://github.com/DominoKit/domino-ui[Domino UI]
+- https://spring.io/projects/spring-boot[Spring Boot]
+- https://www.graalvm.org/[GraalVM] 
+
+== Code
+- https://github.com/sogis/gwt-standortkarte
+

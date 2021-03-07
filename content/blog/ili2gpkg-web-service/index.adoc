@@ -1,0 +1,24 @@
+= ili2gpkg-web-service
+Stefan Ziegler
+2021-03-03
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: java, ili2gpkg, spring boot, qgis
+:idprefix:
+
+== Kontext
+
+Der _ili2gpkg-web-service_ wandelt eine INTERLIS-Transferdatei in eine GeoPackage-Datei um. Entstanden aus dem Bedürfnis Daten der Gefahrenkartierung mit QGIS zu validieren. Für dieses konkrete Datenmodell wird in die hergestellte GeoPackage-Datei auch eine QGIS-Projektdatei hineinkopiert. Somit erhält der Benutzer ein Paket mit Daten und QGIS-Projektdatei und kann gleich mit der Arbeit beginnen. 
+
+Es werden keine https://github.com/claeis/ili2gpkg[_ili2gpkg_]-Optionen exponiert. Somit werden nicht alle möglichen Konstellationen funktionieren (z.B. Kataloge usw.). 
+
+Die Kommunikation zwischen Client und Server basiert auf Websocket, um HTTP-Post-Timeouts zu umgehen.
+
+== Frameworks / Bibliotheken
+
+- https://github.com/claeis/ili2gpkg[ili2gpkg]
+- https://spring.io/projects/spring-boot[Spring Boot]
+
+== Code
+- https://github.com/sogis/ili2gpkg-web-service-ws
+

@@ -1,0 +1,31 @@
+= Ili2pg mit Python
+Stefan Ziegler
+2021-03-03
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: java, python, jython, graalvm
+:idprefix:
+
+== Kontext
+
+https://github.com/claeis/ili2db/[_Ili2db_] und https://github.com/claeis/ilivalidator/[_ilivalidator_] sind **die** Werkzeuge für den Umgang mit INTERLIS-Daten. Entwickelt man sowieso mit Java, ist die Einbindung der beiden Tools (als Bibliothek) kein Problem. Mühsamer wird es wenn man nicht Java verwenden will oder kann (z.B. für QGIS-Plugins).
+
+Entweder bringt man Python auf die JVM oder plusminus umgekehrt.
+
+Für den ersten Fall gibt es zwei Möglichkeiten: https://www.jython.org/[_Jython_] oder die https://www.graalvm.org/reference-manual/python/[Python-Implementierung von _GraalVM_].
+
+Im zweiten Fall macht man aus den Java-Bibliotheken shared libraries (auch mit GraalVM), die dann als mittels Python-Bindings in CPython verwendet werden können und somit keine JVM mehr benötigen. 
+
+In einem http://blog.sogeo.services/blog/2021/02/02/interlis-leicht-gemacht-number-22.html[Blog-Post] habe ich dazu mehr geschrieben.
+
+== Frameworks / Bibliotheken
+
+- https://github.com/claeis/ili2db/[ili2db]
+- https://github.com/claeis/ilivalidator/[ilivalidator] 
+- https://www.jython.org/[Jython]
+- https://www.graalvm.org/[GraalVM]
+
+== Code
+- https://github.com/edigonzales/ili2db-python
+- https://github.com/edigonzales/ili2db-libnative
+

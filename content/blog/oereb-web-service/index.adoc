@@ -1,0 +1,28 @@
+= ÖREB web service
+Stefan Ziegler
+2021-03-03
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: java, öreb, oereb, jaxb, spring boot, xslt, xsl-fo, INTERLIS
+:idprefix:
+
+== Kontext
+
+Unsere Umsetzung eines ÖREB-Webservices. Obwohl es Implementierungen gibt, die häufiger eingesetzt werden (also mehr als einmal), behaupten wir mit Fug und Recht, dass es sich um die eleganteste Lösung handelt. Konzipiert und Proof-of-Concept von uns, finale Umsetzung durch http://eisenhutinformatik.ch/[Eisenhut Informatik AG]. Die PDF-Transformation wiederum stammt aus unserer Feder.
+
+Unsere Grundidee war das Abstützen auf das INTERLIS-Rahmenmodell und alle ÖREB-Themen via Transferstruktur in eine Datenbank zu bringen. Der ÖREB-Webservice muss somit nur noch mit der gewünschten Grundstücksgeometrie einen Durchstich (aka &laquo;Cookie Cutter&raquo;) machen. Für das Umbauen der Datenstruktur und das Exportieren, Prüfen und Importieren von INTERLIS-Daten haben wir bereits eine vorhandene Werkzeugkiste auf die wir uns abstützen können.
+
+Als Basis für den Service dient https://spring.io/projects/spring-boot[_Spring Boot_]. Das Herstellen des XML-Outputs übernimmt https://projects.eclipse.org/projects/ee4j.jaxb-impl[_JAXB_]. Aus dem XML-Auszug wird mittels https://en.wikipedia.org/wiki/XSLT[_XSLT_] und https://en.wikipedia.org/wiki/XSL_Formatting_Objects[_XSL-FO_] das PDF hergestellt.
+
+
+== Frameworks / Bibliotheken
+- https://spring.io/projects/spring-boot[Spring Boot]
+- https://projects.eclipse.org/projects/ee4j.jaxb-impl[JAXB]
+- https://www.saxonica.com/[Saxon]
+- https://xmlgraphics.apache.org/fop/[Apache FOP]
+
+== Code
+- https://github.com/claeis/oereb-web-service
+- https://github.com/sogis/oereb-web-service-docker
+- https://github.com/openoereb/pdf4oereb
+

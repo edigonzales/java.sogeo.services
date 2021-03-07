@@ -1,0 +1,22 @@
+= ilivalidator-web-service
+Stefan Ziegler
+2021-02-07
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: java, ilivalidator, spring boot
+:idprefix:
+
+== Kontext
+
+Der _ilivalidator-web-service_ dient zum Validieren beliebiger INTERLIS-Transferdateien. Entstanden aus dem Bedürfnis, dass Ingenieur- und Planungsbüros, die Nutzungsplanungsdaten erfassen, selbständig die Daten prüfen können. Heute wird der bewusst sehr einfach gehaltene Service für verschiedene Themen eingesetzt. So werden z.B. keine Optionen exponiert. Grundsätzlich kann gegen jedes Datenmodell geprüft werden, das in den Standard-Modellablagen (resp. in verknüpften Modellablagen) vorhanden ist. Für einige wenige Modellen werden automatisch Zusatzvalidierungen eingesetzt.
+
+In einer ersten Version wurden die Daten mittels HTTP-Post hochgeladen. Weil die Firewall die Verbindung zwischen Browser und Server nacah 2 Minuten kappte, wird momentan auf Websocket gesetzt. Die Logfiles werden, zwecks einfacherer horizontaler Skalierung in Openshift, auf AWS S3 gespeichert.
+
+== Technologien
+
+- https://github.com/claeis/ilivalidator[ilivalidator]
+- https://spring.io/projects/spring-boot[Spring Boot]
+
+== Code
+- https://github.com/sogis/ilivalidator-web-service-websocket
+
